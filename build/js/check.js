@@ -5,7 +5,9 @@ function getMessage(a, b){
   if (typeOfA == 'boolean') {
     if (a == true) {
       return 'Переданное GIF-изображение анимировано и содержит ' + b + ' кадров';
-    } 
+    } else {
+    return 'Переданное GIF-изображение не анимировано';
+    }
   } 
   else if (typeOfA == 'number') {
     return 'Переданное SVG-изображение содержит ' + a + ' объектов и ' + (b * 4) + ' атрибутов';
@@ -23,9 +25,5 @@ function getMessage(a, b){
       }
       return 'Количество красных точек во всех строчках изображения: ' + sumA;
     } 
-  }
-  else
-  {
-    return 'Переданное GIF-изображение не анимировано';
   }
 }
