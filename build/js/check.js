@@ -8,18 +8,15 @@ function getMessage(a, b){
     } else {
     return 'Переданное GIF-изображение не анимировано';
     }
-  } 
-  else if (typeOfA == 'number') {
+  } else if (typeOfA == 'number') {
     return 'Переданное SVG-изображение содержит ' + a + ' объектов и ' + (b * 4) + ' атрибутов';
-  } 
-  else if (Array.isArray(a)) {
+  } else if (Array.isArray(a)) {
     if (Array.isArray(b)) {
       for (var i = 0; i < b.length; i++) {
         squareAB += a[i] * b[i];
       }
     return 'Общая площадь артефактов сжатия: ' + squareAB;
-    } 
-    else {
+    } else {
       for (var i = 0; i < b.length; i++) {
         sumA += a[i];
       }
