@@ -6,7 +6,7 @@ function getMessage(a, b){
     if (a == true) {
       return 'Переданное GIF-изображение анимировано и содержит ' + b + ' кадров';
     } else {
-    return 'Переданное GIF-изображение не анимировано';
+      return 'Переданное GIF-изображение не анимировано';
     }
   } else if (typeOfA == 'number') {
     return 'Переданное SVG-изображение содержит ' + a + ' объектов и ' + (b * 4) + ' атрибутов';
@@ -15,9 +15,9 @@ function getMessage(a, b){
       for (var i = 0; i < b.length; i++) {
         squareAB += a[i] * b[i];
       }
-    return 'Общая площадь артефактов сжатия: ' + squareAB;
+      return 'Общая площадь артефактов сжатия: ' + squareAB;
     } else {
-      for (var i = 0; i < b.length; i++) {
+      for (var i = 0; i < a.length; i++) {
         sumA += a[i];
       }
       return 'Количество красных точек во всех строчках изображения: ' + sumA;
