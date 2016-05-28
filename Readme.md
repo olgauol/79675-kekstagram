@@ -1,7 +1,7 @@
 # Личный проект «Кекстаграм» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Olga Rink](https://up.htmlacademy.ru/javascript/5/user/79675).
-* Наставник: `Антон Лунев`.
+* Наставник: [Антон Лунёв](https://htmlacademy.ru/profile/id118520).
 
 ---
 
@@ -14,7 +14,7 @@ _`.editorconfig`, `.eslintignore`, `.eslintrc`, `.gitignore`, `.travis.yml`, `pa
 
 Репозиторий создан для обучения на интенсивном онлайн‑курсе «[Базовый JavaScript](https://htmlacademy.ru/intensive/javascript)» от [HTML Academy](https://htmlacademy.ru).
 
-[travis-image]: https://travis-ci.org/htmlacademy-javascript/79675-kekstagram.svg?branch=master
-[travis-url]: https://travis-ci.org/htmlacademy-javascript/79675-kekstagram
-[dependency-image]: https://david-dm.org/htmlacademy-javascript/79675-kekstagram.svg?style=flat-square
-[dependency-url]: https://david-dm.org/htmlacademy-javascript/79675-kekstagram
+[travis-image]: https://travis-ci.org/htmlacademy-javascript/142769-kekstagram.svg?branch=master
+[travis-url]: https://travis-ci.org/htmlacademy-javascript/142769-kekstagram
+[dependency-image]: https://david-dm.org/htmlacademy-javascript/142769-kekstagram.svg?style=flat-square
+[dependency-url]: https://david-dm.org/htmlacademy-javascript/142769-kekstagram
