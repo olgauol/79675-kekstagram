@@ -147,6 +147,16 @@
       // 0 0 находится в левом верхнем углу холста, в противном случае
       // некорректно сработает даже очистка холста или нужно будет использовать
       // сложные рассчеты для координат прямоугольника, который нужно очистить.
+      
+      //начало текста над картинкой
+      this._ctx.fillStyle = '#FFF';
+      this._ctx.font = '14px Arial';
+      this._ctx.textBaseline = 'bottom';
+      this._ctx.textAlign = 'center';
+      this._ctx.fillText(
+        this._image.naturalWidth + ' x ' + this._image.naturalHeight, 
+        0, 
+        -this._resizeConstraint.side / 2 - this._ctx.lineWidth * 2);
       this._ctx.restore();
     },
 
