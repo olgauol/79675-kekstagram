@@ -201,7 +201,7 @@
   resizeX.min = 0;
   resizeY.min = 0;
 
-  resizeForm.onchange = function (evt) {
+  resizeForm.onchange = function(evt) {
     evt.preventDefault();
 
     if (Number(resizeX.value) + Number(resizeSide.value) > currentResizer._image.naturalWidth) {
@@ -211,9 +211,8 @@
     } else {
       submitBtn.disabled = false;
     }
-  };  
+  };
 
- 
   resizeForm.onsubmit = function(evt) {
     evt.preventDefault();
 
