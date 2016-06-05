@@ -1,1 +1,3 @@
-require('./resizer');require('./upload');
+use strict;
+require('./resizer');
+require('./upload');
