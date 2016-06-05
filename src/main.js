@@ -1,3 +1,4 @@
-use strict;
+'use strict';
+
 require('./resizer');
 require('./upload');
