@@ -191,6 +191,29 @@
    * кропнутое изображение в форму добавления фильтра и показывает ее.
    * @param {Event} evt
    */
+
+/** @const {number}*/
+  var resizeX = document.querySelector('#resize-x');
+  var resizeY = document.querySelector('#resize-y');
+  var resizeSide = document.querySelector('#resize-size');
+  var submitBtn = document.getElementById('resize-fwd');
+
+  resizeX.min = 0;
+  resizeY.min = 0;
+
+  resizeForm.onchange = function (evt) {
+    evt.preventDefault();
+
+    if (Number(resizeX.value) + Number(resizeSide.value) > currentResizer._image.naturalWidth) {
+      submitBtn.disabled = true;
+    } else if (Number(resizeY.value) + Number(resizeSide.value) > currentResizer._image.naturalHeight) {
+      submitBtn.disabled = true;
+    } else {
+      submitBtn.disabled = false;
+    }
+  };  
+
+ 
   resizeForm.onsubmit = function(evt) {
     evt.preventDefault();
 
