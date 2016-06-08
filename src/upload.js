@@ -204,16 +204,16 @@
   resizeSide.min = 100;
 
   resizeX.oninput = function() {
-      validateNumberFields();
-  }
+    validateNumberFields();
+  };
   resizeY.oninput = function() {
-      validateNumberFields();
-  }
+    validateNumberFields();
+  };
   resizeSide.oninput = function() {
-      validateNumberFields();
-  }
+    validateNumberFields();
+  };
 
-  function validateNumberFields(){
+  function validateNumberFields() {
     if ((parseInt(resizeX.value, 10) + parseInt(resizeSide.value, 10)) <= currentResizer._image.naturalWidth
       && (parseInt(resizeY.value, 10) + parseInt(resizeSide.value, 10)) <= currentResizer._image.naturalHeight
     ) {
@@ -221,7 +221,7 @@
     } else {
       submitBtn.disabled = true;
     }
-  };
+  }
 
   resizeForm.onsubmit = function(evt) {
     evt.preventDefault();
