@@ -192,7 +192,8 @@
    * @param {Event} evt
    */
 
-/** @const {number}*/
+//Вадидация формы кадрирования
+
   var resizeX = document.querySelector('#resize-x');
   var resizeY = document.querySelector('#resize-y');
   var resizeSide = document.querySelector('#resize-size');
@@ -200,16 +201,25 @@
 
   resizeX.min = 0;
   resizeY.min = 0;
+  resizeSide.min = 100;
 
-  resizeForm.onchange = function(evt) {
-    evt.preventDefault();
+  resizeX.oninput = function() {
+      validateNumberFields();
+  }
+  resizeY.oninput = function() {
+      validateNumberFields();
+  }
+  resizeSide.oninput = function() {
+      validateNumberFields();
+  }
 
-    if (Number(resizeX.value) + Number(resizeSide.value) > currentResizer._image.naturalWidth) {
-      submitBtn.disabled = true;
-    } else if (Number(resizeY.value) + Number(resizeSide.value) > currentResizer._image.naturalHeight) {
-      submitBtn.disabled = true;
-    } else {
+  function validateNumberFields(){
+    if ((parseInt(resizeX.value, 10) + parseInt(resizeSide.value, 10)) <= currentResizer._image.naturalWidth
+      && (parseInt(resizeY.value, 10) + parseInt(resizeSide.value, 10)) <= currentResizer._image.naturalHeight
+    ) {
       submitBtn.disabled = false;
+    } else {
+      submitBtn.disabled = true;
     }
   };
 

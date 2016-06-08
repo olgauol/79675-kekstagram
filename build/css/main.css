@@ -199,7 +199,7 @@ body {
 }
 
 .upload-form-controls-fwd:disabled {
-  background: rgba(255, 231, 83, 0.1);
+  background: rgba(253, 14, 0, 0.9) url("../img/icon-arrow.png") center no-repeat;
 }
 
 .upload-resize canvas {
