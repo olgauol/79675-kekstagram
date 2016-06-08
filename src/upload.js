@@ -191,6 +191,37 @@
    * кропнутое изображение в форму добавления фильтра и показывает ее.
    * @param {Event} evt
    */
+
+/** Проверка формы кадрирования на валидность*/
+
+  var resizeX = document.querySelector('#resize-x');
+  var resizeY = document.querySelector('#resize-y');
+  var resizeSide = document.querySelector('#resize-size');
+  var submitBtn = document.getElementById('resize-fwd');
+
+  resizeX.min = 0;
+  resizeY.min = 0;
+  resizeSide.min = 100;
+
+  resizeX.oninput = function(){
+      validateNumberFields();
+  }
+  resizeY.oninput = function(){
+      validateNumberFields();
+  }
+  resizeSide.oninput = function(){
+      validateNumberFields();
+  }
+
+  function validateNumberFields(){
+    if ((parseInt(resizeX.value, 10) + parseInt(resizeSide.value, 10)) <= currentResizer._image.naturalWidth
+        &&(parseInt(resizeY.value, 10) + parseInt(resizeSide.value, 10)) <= currentResizer._image.naturalHeight
+    ) {submitBtn.disabled = false;
+    } else {
+      submitBtn.disabled = true;
+    }
+  }
+
   resizeForm.onsubmit = function(evt) {
     evt.preventDefault();
 
